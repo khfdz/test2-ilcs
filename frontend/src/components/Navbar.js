@@ -3,21 +3,37 @@ import React, { useEffect, useState } from "react";
 const Navbar = () => {
   const [time, setTime] = useState(new Date());
 
-  // Update time every second
   useEffect(() => {
     const timer = setInterval(() => {
       setTime(new Date());
     }, 1000);
 
-    return () => clearInterval(timer); // Cleanup on unmount
+    return () => clearInterval(timer); 
   }, []);
 
-  // Format time and date
   const formatDateTime = (date) => {
-    const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+    const days = [
+      "Minggu",
+      "Senin",
+      "Selasa",
+      "Rabu",
+      "Kamis",
+      "Jumat",
+      "Sabtu",
+    ];
     const months = [
-      "Januari", "Februari", "Maret", "April", "Mei", "Juni",
-      "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+      "Januari",
+      "Februari",
+      "Maret",
+      "April",
+      "Mei",
+      "Juni",
+      "Juli",
+      "Agustus",
+      "September",
+      "Oktober",
+      "November",
+      "Desember",
     ];
 
     const day = days[date.getDay()];
@@ -31,15 +47,11 @@ const Navbar = () => {
 
   return (
     <nav className="flex justify-between items-center bg-gray-800 p-4 text-white">
-      {/* Left: Brand Name */}
       <div className="text-lg font-bold">INSW</div>
 
-      {/* Right: Time, Notification, Profile */}
       <div className="flex items-center space-x-6">
-        {/* Date & Time */}
         <span className="text-sm">{formatDateTime(time)}</span>
 
-        {/* Notification Icon */}
         <div className="relative">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +72,7 @@ const Navbar = () => {
           </span>
         </div>
 
-        {/* Profile Icon */}
+
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
