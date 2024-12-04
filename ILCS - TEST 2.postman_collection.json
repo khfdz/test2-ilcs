@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "98cfcab7-6931-4227-ad49-d94d13cb46ac",
+		"name": "ILCS - TEST 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33193931"
+	},
+	"item": [
+		{
+			"name": "Data-Utama",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/data-utama?nomor_pengajuan=20120B388FAE20240402000001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"data-utama"
+					],
+					"query": [
+						{
+							"key": "nomor_pengajuan",
+							"value": "20120B388FAE20240402000001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data-Entitas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/data-entitas?id_aju=04eb6a72-bb63-5aed-5e92-f58a3bfd5da2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"data-entitas"
+					],
+					"query": [
+						{
+							"key": "id_aju",
+							"value": "04eb6a72-bb63-5aed-5e92-f58a3bfd5da2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data-Pungutan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/data-pungutan?id_aju=04eb6a72-bb63-5aed-5e92-f58a3bfd5da2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"data-pungutan"
+					],
+					"query": [
+						{
+							"key": "id_aju",
+							"value": "04eb6a72-bb63-5aed-5e92-f58a3bfd5da2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data-PungutanDB",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/data-pungutan?id_aju=04eb6a72-bb63-5aed-5e92-f58a3bfd5da2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"data-pungutan"
+					],
+					"query": [
+						{
+							"key": "id_aju",
+							"value": "04eb6a72-bb63-5aed-5e92-f58a3bfd5da2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data-Pungutan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_aju\": \"04eb6a72-bb63-5aed-5e92-f58a3bfd5da2\",\r\n    \"nilai_incoterm\": 60000, \r\n    \"biaya_tambahan\": 800,  \r\n    \"biaya_pengurang\": 1500,\r\n    \"tarif_vd\": 6000,\r\n    \"nilai_asuransi\": 5500,\r\n    \"freight\": 500,\r\n    \"nilai_kurs\": 17650,\r\n    \"fob\": 65400,\r\n    \"cif\": 71350,\r\n    \"cif_rp\": 1260042500\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/data-pungutan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"data-pungutan"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
